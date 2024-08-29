@@ -1,0 +1,273 @@
+{
+  "ex": {
+    "prompt_type": 2,
+	"essay": "I fell in love with the minister's son the winter I turned fourteen. He was not Chinese, but as white as Mary in the  manger. For Christmas I prayed for this blond-haired boy,  Robert, and a slim new American nose. When I found out that my parents had invited the minister's  family over for Christmas Eve dinner, I cried. What would  Robert think of our shabby Chinese Christmas? What would he think of our noisy Chinese relatives who lacked  proper American manners? What terrible disappointment  would he feel upon seeing not a roasted turkey and sweet  potatoes but Chinese food? On Christmas Eve I saw that my mother had outdone  herself in creating a strange menu. She was pulling black  veins out of the backs of fleshy prawns. The kitchen was littered with appalling mounds of raw food: A slimy rock  cod with bulging eyes that pleaded not to be thrown into a  pan of hot oil. Tofu, which looked like stacked wedges of  rubbery white sponges. A bowl soaking dried fungus back  to life. A plate of squid, their backs crisscrossed with knife  markings so they resembled bicycle tires. And then they arrived – the minister's family and all my  relatives in a clamor of doorbells and rumpled Christmas packages. Robert grunted hello, and I  pretended he was not worthy of existence. Dinner threw me deeper into despair. My relatives  licked the ends of their chopsticks and reached across  the table, dipping them into the dozen or so plates of  food. Robert and his family waited patiently for platters to be passed to them. My relatives murmured with  pleasure when my mother brought out the whole  steamed fish. Robert grimaced. Then my father poked  his chopsticks just below the fish eye and plucked out  the soft meat. Amy, your favorite, he said, offering me  the tender fish cheek. I wanted to disappear. At the end of the meal my father leaned back and  belched loudly, thanking my mother for her fine cooking. It's a polite Chinese custom to show you are  satisfied, explained my father to our astonished guests.  Robert was looking down at his plate with a reddened  face. The minister managed to muster up a quiet burp. I  was stunned into silence for the rest of the night. After everyone had gone, my mother said to me, You  want to be the same as American girls on the outside. She handed me an early gift. It was a miniskirt in beige tweed. But inside you must always be Chinese. You must be proud you are different. Your only shame  is to have shame. And even though I didn't agree with her then, I knew that she understood how much I had suffered during the evening's dinner. It wasn't until many years later – long  after I had gotten over my crush on Robert – that I was able to fully appreciate her lesson and the true purpose behind our particular menu. For Christmas Eve that year, she had chosen all my favorite foods.",
+    "question": "What is the main reason the narrator feels the need to be independent of her family and culture? ",
+    "support_a": {
+      "relevant_facts": [
+        {
+          "describe": "desire to conform to American beauty standards",
+          "sentences": [
+            "For Christmas I prayed for this blond-haired boy, Robert, and a slim new American nose.",
+            "a slim new American nose.",
+            "want to be the same as American girls on the outside"
+          ]
+        },
+        {
+          "describe": "Fit in the American culture",
+          "sentences": [
+            "What terrible disappointment would he feel upon seeing not a roasted turkey and sweet potatoes but Chinese food.",
+            "noisy Chinese relatives who lacked proper American manners."
+          ]
+        },
+        {
+          "describe":"general fact",
+          "sentences": []
+        }
+      ]
+    },
+    "support_b": {
+      "relevant_facts": [
+        {
+          "describe": "feels embarrassed about her Chinese culture",
+          "sentences": [
+            "I cried. What would Robert think of our shabby Chinese Christmas",
+            "What would he think of our noisy Chinese relatives who lacked proper American manners?",
+            "licked the ends of the chopsticks and reached across the table, dipping them into the dozen",
+            "It’s a polite Chinese custom to show you are satisfied.",
+            "my father leaned back and belched loudly.",
+            "Even though you want to look American on the outside you should always be a proud Chinese girl on the inside",
+            "The minister managed to muster up a quiet burp. I was stunned into silence for the rest of the night.",
+            "inside you must always be Chinese. You must be proud you are different.",
+            "Your only shame is to have shame.",
+            "She was ashamed that they didn't have a normal American dinner and that her parents brought over the minister's family for a shabby Chinese Christmas"
+          ]
+        },
+        {
+          "describe": "Feels embarrassed about the food",
+          "sentences": [
+            "Amy, your favorite, he said, offering me the tender fish cheek. I wanted to disappear.",
+            "When Amy’s father hands her the fish cheek, she is clearly embarrassed and “wanted to disappear.”",
+            "A slimy rock cod with bulging eyes that pleaded not to be thrown into a pan of hot oil.",
+            "Tofu, which looked like stacked wedges of rubbery white sponges. ",
+            "A bowl soaking dried fungus back to life. ",
+            "A plate of squid, their backs crisscrossed with knife markings so they resembled bicycle tires.",
+            "Dinner threw me deeper into despair."
+          ]
+        },
+        {
+          "describe":"general fact",
+          "sentences": []
+        }
+      ]
+    },
+    "support_c": {
+      "relevant_facts": [
+        {
+          "describe": "she may perceive the need to break away from her own culture to be closer to him",
+          "sentences": [
+            "For Christmas I prayed for this blond-haired boy, Robert, and a slim new American nose.",
+            "What would Robert think of our shabby Chinese Christmas?",
+			"When I found out that my parents had invited the minister's family over for Christmas Eve dinner, I cried"
+          ]
+        },
+        {
+          "describe": "protect herself from potential rejection",
+          "sentences": [
+            "Robert grunted hello, and I pretended he was not worthy of existence"
+          ]
+        },
+        {
+          "describe": "She fears that her cultural background may make her seem less desirable or inferior to him and his family",
+          "sentences": [
+            "Amy, your favorite, he said, offering me the tender fish cheek. I wanted to disappear.",
+            "She perceives her family's traditional Chinese Christmas dinner as strange and unappealing to someone like Rober.",
+            "What would he think of our noisy Chinese relatives who lacked proper American manners?",
+            "It's a polite Chinese custom to show you are satisfied"
+          ]
+        },
+        {
+          "describe":"general fact",
+          "sentences": []
+        }
+      ]
+    },
+    "solution": [
+      
+    ],
+    "general_info": [
+      
+    ],
+    "a_claim": [
+      "The narrator desires acceptance from the American culture and Assimilation.",
+      "She wants to fit in with her American peers.",
+      "feels the need to be independent of her family and culture because she is not American.",
+      "The narrator fears rejection and marginalization due to her cultural background.",
+      "The narrator desires to assimilate into American customs and physical appearance.",
+      "She wishes to fit in and be accepted within the American social circle.",
+      "Amy denies her Chinese heritage because she wants to fit in with other teens.",
+      "the narrator is concerned about how her family's Chinese traditions might be perceived by someone from a different cultural background."
+    ],
+    "b_claim": [
+      "She feels embarrassed about her Chinese culture.",
+      "Christmas dinner made her feel embarrassed about her own cultural traditions.",
+      "She may feel embarrassed by her Chinese heritage",
+      "Amy wants to be independent from her family because she’s embarrassed by how strange they appear to Americans.",
+      "The narrator feels the need to be independent of her family and culture due to a sense of embarrassment and shame."
+      
+    ],
+    "c_claim": [
+      "crush Robert would think negatively about her Christmas dinner",
+      "The narrator feels the need to be independent she is afraid of Robert would think negatively about her Christmas dinner",
+      "The narrator feels the need to be independent of her family and culture because her crush on Robert",
+      "The narrator's infatuation with Robert, the minister's son,plays a significant role in her desire for independence.",
+      "The attraction to Robert may cause her desire for independence.",
+      "Amy feels uncomfortable with her Chinese culture because she likes Robert, and worries he’ll find it strange."
+    ]
+  },
+  "keys": [
+    {
+      "describe": "desire to conform to American beauty standards",
+      "key_word": [
+        [
+          "blond-haired"
+        ],
+        [
+          "American nose"
+        ],
+        [
+          "American girls on the outside"
+        ]
+      ]
+    },
+    {
+      "describe": "Fit in the American culture",
+      "key_word": [
+        [
+          "not a roasted turkey"
+        ],
+        [
+          "lack",
+          "manner"
+        ]
+      ]
+    },
+    {
+      "describe": "feels embarrassed about her Chinese culture",
+      "key_word": [
+        [
+          "shabby Chinese Christmas"
+        ],
+        [
+          "noisy Chinese relative"
+        ],
+        [
+          "noisy family"
+        ],
+        [
+          "leaned back"
+        ],
+        [
+          "belched loudly"
+        ],
+        [
+          "stunned into silence"
+        ],
+		[
+          "lick",
+		  "chopstick"
+        ],
+		[
+          "reached across the table"
+        ],
+        [
+          "wanted to disappear"
+        ],
+		[
+          "stunned into silence"
+        ],
+        [
+          "feel stunded"
+        ],
+		[
+		"lack",
+		"manners"
+		]
+      ]
+    },
+    {
+      "describe": "Feels embarrassed about the food",
+      "key_word": [
+        [
+          "the tender fish cheek"
+        ],
+		[
+          "strange menu"
+        ],
+        [
+          "A slimy rock cod"
+        ],
+        [
+          "stacked wedges of rubbery"
+        ]
+      ]
+    },
+    {
+      "describe": "she may perceive the need to break away from her own culture to be closer to him",
+      "key_word": [
+        [
+          "prayed for this blond-haired boy"
+        ],
+        [
+          "What would Robert think"
+        ]
+      ]
+    },
+    {
+      "describe": "protect herself from potential rejection",
+      "key_word": [
+        [
+          "worthy of existence"
+        ],
+        [
+          "igrone",
+          "Robert"
+        ],
+		[
+          "stunned into silence"
+        ],
+        [
+          "wanted to disappear"
+        ]
+      ]
+    },
+    {
+      "describe": "She fears that her cultural background may make her seem less desirable or inferior to him and his family",
+      "key_word": [
+        [
+          "lack",
+          "manner"
+        ],
+        [
+          "leaned back"
+        ],
+		[
+          "shabby Chinese Christmas"
+        ],
+        [
+          "noisy Chinese relative"
+        ],
+        [
+          "noisy family"
+        ],
+        [
+          "belched loudly"
+        ],
+        [
+          "face",
+		  "reddened"
+        ]
+      ]
+    }
+  ]
+}

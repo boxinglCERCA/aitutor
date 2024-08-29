@@ -1,0 +1,441 @@
+{
+    "ex": {
+    "prompt_type": 1,
+	"essay": "One of four sacred mountains, it marks the southern boundary of the traditional homeland of the Navajo tribe. The summit is a holy site of prayer and ceremonies. Medicine men gather herbs and soil on the slopes. For centuries, Mount Taylor has been a sacred place for Native American tribes in the Southwest. Today, it is a place in peril. Mount Taylor, at an elevation of 11,300 feet, is visible from more than 100 miles away. Douglas fir, aspen, and piñon pine trees in the Cibola National Forest blanket the mountain. Spires of volcanic rock rise on the north slope. The peak is often snow-capped. But it is what lies underneath the mountain that threatens this site. Mount Taylor sits atop one of the richest uranium ore reserves in the country. Uranium is a metal found in the layers of sandstone in the Four Corners area of New Mexico, Arizona, Colorado, and Utah. The city of Grants, New Mexico, 20 miles from Mount Taylor, was once considered a uranium capital of the world. This element is radioactive. Its atoms can easily be made to release huge amounts of energy. A single pound of uranium contains about as much energy as 3  million pounds of coal. In nuclear power plants, uranium rods are used as fuel to produce energy.Extracting the ore is a long and complicated process. For every two pounds of uranium, 998 pounds of radioactive waste is left over in piles and pits. Over time it can leak into the soil and underground water if the area is not reclaimed. Uranium mining in New Mexico was a booming business from the 1950s to 1980s, but it took its toll on the people and the land. Exposure to radioactive dust andcontaminated groundwater causes health problems. Indeed, there is a higher incidence of lung cancer and other serious illnesses in mining communities. Rocks tinged with the greenish hue of uranium ore blanket the landscape because cleanup of old mining activity has not been completed. Mines on Mount Taylor were shuttered in 1990 due to the low price of uranium. Recently Canadian, Japanese, and U.S. companies have submitted permits to establish new mines even though current U.S. mines are operating at only one third of their capacity.  The nearby city of Grants welcomes the opportunity to provide jobs and create business projects. Millions of dollars of tax revenues would benefit the entire state. But U.S. Forest Service officials acknowledge that the mines will have significant impact on archaeological sites and traditional Native activities. Mining may contaminate the water source for nearby Acoma Sky City, the oldest inhabited community in the United States. But an 1872federal law permits mining regardless of its impact on cultural or natural resources. In 2009, members of the Navajo Nation, Hopi tribe, and Zuni, Acoma, and Laguna Pueblos worked together with the state of New Mexico to obtain the special designation as a Traditional Cultural Property for 434,000 acres of Mount Taylor. The Native Americans felt this was the best way to protect their sacred mountain while still providing the public with access for wood gathering, hunting, hiking, and cattle grazing. This special status for Mount .  Taylor angered the mining companies, ranchers, and property owners, whose livelihoods depend on using this land. Court battles challenged the status with claims that the area was too large to be protected as a historic site. A state district court overturned the Traditional Cultural Property designation in 2011. The case is now in the state Supreme Court.Mount Taylor was named one of America’s Most Endangered Places by the National Trust for Historic Preservation. Uranium mining is the turning point. ",
+    "question": "Should uranium be mined at Mount Taylor? Support your claim with evidence from the text.",
+    "support_yes": {
+      "relevant_facts": [
+        {
+          "describe": "Mount Taylor, richest uranium ore reserves",
+          "sentences": [
+            "Mount Taylor sits atop one of the richest uranium ore reserves in the country.",
+            "The city of Grants, New Mexico, 20 miles from Mount Taylor, was once considered a uranium capital of the world. "
+          ]
+        },
+        {
+          "describe": "Uranium contains huge amounts of energy",
+          "sentences": [
+            "uranium releases huge amounts of energy",
+            "Its atoms can easily be made to release huge amounts of energy.",
+            "A single pound of uranium contains about as much energy as 3 million pounds of coal.",
+            "In nuclear power plants, uranium rods are used as fuel to produce energy."
+          ]
+        },
+        {
+          "describe": "Mining benefits the economy",
+          "sentences": [
+            "The nearby city of Grants welcomes the opportunity to provide jobs and create business projects.",
+            "Millions of dollars of tax revenues would benefit the entire state. ",
+            "Mining bring jobs and money."
+          ]
+        },
+        {
+          "describe": "state district court's attitude",
+          "sentences": [
+            "A state district court overturned the Traditional Cultural Property designation in 2011. ",
+            "Court battles challenged the status with claims that the area was too large to be protected as a historic site. "
+          ]
+        },
+        {
+          "describe":"general fact",
+          "sentences": []
+        }
+      ]
+    },
+    "support_no": {
+      "relevant_facts": [
+        {
+          "describe": "Mount Taylor is a sacred place",
+          "sentences": [
+            "Mount Taylor is a sacred, historical, important piece for many Native Americans.",
+            "Pueblo Indians describe it as “a mountain of life.” ",
+            "To the Acoma people, it is the “place of snow,” the source of life-giving water.",
+            "It is the home of the Hopi spirit of the volcano. ",
+            "One of four sacred mountains, it marks the southern boundary of the traditional homeland of the Navajo tribe. ",
+            "The summit is a holy site of prayer and ceremonies. ",
+            "Medicine men gather herbs and soil on the slopes. ",
+            "For centuries, Mount Taylor has been a sacred place for Native American tribes in the Southwest. ",
+            "Today, it is a place in peril."
+          ]
+        },
+        {
+          "describe": "Extracting the ore produces radioactive waste",
+          "sentences": [
+            "For every two pounds of uranium, 998 pounds of radioactive waste is left over in piles and pits. ",
+            "Over time it can leak into the soil and underground water if the area is not reclaimed.",
+            "Rocks tinged with the greenish hue of uranium ore blanket the landscape because cleanup of old mining activity has not been completed"
+          ]
+        },
+        {
+          "describe": "Mining contaminates environment and causes health problem",
+          "sentences": [
+            "Mining uranium can contaminate the land because it leaks under the soil",
+            "Extracting the ore is a long and complicated process. ",
+            "This element is radioactive. ",
+            "mining can cause air pollution",
+            "Uranium mining may also contaminate the primary water resource",
+            "toxins are released into the air",
+            "the waste can leak into the soil and underground water if the area is not reclaimed",
+            "toxins and radioactive dust can cause serious illnesses",
+            "Exposure to radioactive dust and contaminated groundwater causes health problems. ",
+            "Indeed, there is a higher incidence of lung cancer and other serious illnesses in mining communities. ",
+            "Mining may contaminate the water source for nearby Acoma Sky City, the oldest inhabited community in the United States. ",
+            "the people mining Mount Taylor are going to get sick because they will either breath radioactive dust or drink radioactive groundwater."
+          ]
+        },
+        {
+          "describe": "mining impact on traditional Native",
+          "sentences": [
+            "U.S. Forest Service officials acknowledge that the mines will have significant impact on archaeological sites and traditional Native activities.",
+            "In 2009, members of the Navajo Nation, Hopi tribe, and Zuni, Acoma, and Laguna Pueblos worked together with the state of New Mexico to obtain the special designation as a Traditional Cultural Property for 434,000 acres of Mount Taylor.",
+            "The Native Americans felt this was the best way to protect their sacred mountain while still providing the public with access for wood gathering, hunting, hiking, and cattle grazing. ",
+            "Many local tribes fear the development of uranium resources in the Mount Taylor region would destroy the culturally and spiritually significant land."
+          ]
+        },
+        {
+          "describe":"general fact",
+          "sentences": []
+        }
+      ]
+    },
+    "solution": [
+    ],
+    "general_info": [
+      "Navajo named it, Tsoodzil, or Blue Bead.",
+      "Mount Taylor, at an elevation of 11,300 feet, is visible from more than 100 miles away. ",
+      "Douglas fir, aspen, and piñon pine trees in the Cibola National Forest blanket the mountain. ",
+      "Spires of volcanic rock rise on the north slope. ",
+      "The peak is often snow-capped. ",
+      "But it is what lies underneath the mountain that threatens this site. ",
+      "Uranium is a metal found in the layers of sandstone in the Four Corners area of New Mexico, Arizona, Colorado, and Utah. ",
+      "Uranium mining in New Mexico was a booming business from the 1950s to 1980s, but it took its toll on the people and the land. ",
+      "Mines on Mount Taylor were shuttered in 1990 due to the low price of uranium",
+      "Recently Canadian, Japanese, and U.S. companies have submitted permits to establish new mines even though current U.S. mines are operating at only one third of their capacity. ",
+      "But an 1872 federal law permits mining regardless of its impact on cultural or natural resources.",
+      "This special status for Mount Taylor angered the mining companies, ranchers, and property owners, whose livelihoods depend on using this land. ",
+      "The case is now in the state Supreme Court.",
+      "Mount Taylor was named one of America’s Most Endangered Places by the National Trust for Historic Preservation. ",
+      "Will the sacred ties that the Native people have with the earth be broken? ",
+      "Do the mining companies have an obligation to consider the tribal interests and environmental impact? ",
+      "Will the potential economic reward outweigh the risk?",
+      "What is the fate of Mt. Taylor? "
+    ],
+    "n_claim": [
+      "Uranium shouldn´t be mined at Mount Taylor.",
+      "Mining uranium can be harmful",
+      "mining it can cause serious problems",
+      "mining uranium risks the health of anyone nearby",
+      "Another reason why we shouldn't mine at Mount Taylor is that",
+      "Mining Mount Taylor is not a good idea",
+      "People should not want to start mining",
+      "In conclusion, Mount Taylor shouldn't be mined ",
+      "Mining should have stopped",
+      "People shouldn't mine in Mount Taylor"
+    ],
+    "y_claim": [
+      "Uranium should be mined at Mount Taylor.",
+      "urnaium should be mined",
+      "Mount Taylor should be minded",
+      "Mount Taylor Needs to stay open to mine",
+      "mining of Mount Taylor would be very beneficial",
+      "The mining of Mount Taylor should still happen.",
+      "In conclusion, uranium should be mined",
+      "mount taylor should be minded",
+      "In conclusion, Mount Tyler should be mined"
+    ]
+  },
+  "keys": [
+    {
+      "describe": "Mount Taylor, richest uranium ore reserves",
+      "key_word": [
+        [
+          "richest uranium"
+        ],
+        [
+          "uranium capital"
+        ]
+      ]
+    },
+    {
+      "describe": "Uranium contains huge amounts of energy",
+      "key_word": [
+        [
+          "huge amount",
+          "energy"
+        ],
+        [
+          "energy",
+          "3 million pound"
+        ],
+        [
+          "uranium rods",
+          "produce energy"
+        ],
+        [
+          "nuclear power plants"
+        ],
+        [
+          "large amount",
+          "energy"
+        ],
+        [
+          "power-plants"
+        ]
+      ]
+    },
+    {
+      "describe": "Mining benefits the economy",
+      "key_word": [
+        [
+          "provide job"
+        ],
+        [
+          "create business"
+        ],
+        [
+          "tax revenue"
+        ],
+        [
+          "business projects"
+        ],
+        [
+          "bring job"
+        ],
+        [
+          "creates job"
+        ],
+        [
+          "great for business"
+        ]
+      ]
+    },
+    {
+      "describe": "state district court's attitude",
+      "key_word": [
+        [
+          "district court",
+          "overturn"
+        ],
+        [
+          "large to be protected"
+        ]
+      ]
+    },
+    {
+      "describe": "Mount Taylor is a sacred place",
+      "key_word": [
+        [
+          "a mountain of life"
+        ],
+        [
+          "place of snow"
+        ],
+        [
+          "life-giving water"
+        ],
+        [
+          "hopi spirit"
+        ],
+        [
+          "homeland of the Navajo tribe"
+        ],
+        [
+          "sacred mountain"
+        ],
+        [
+          "holy site",
+          "prayer"
+        ],
+        [
+          "sacred place"
+        ],
+        [
+          "place in peril"
+        ],
+        [
+          "sacred ritual spot"
+        ]
+      ]
+    },
+    {
+      "describe": "Extracting the ore produces radioactive waste",
+      "key_word": [
+        [
+          "radioactive waste",
+          "left"
+        ],
+        [
+          "leak",
+          "underground water"
+        ],
+        [
+          "leak",
+          "soil"
+        ],
+        [
+          "rocks tinged"
+        ],
+        [
+          "leave",
+          "waste"
+        ],
+        [
+          "leave",
+          "radioactive waste"
+        ]
+      ]
+    },
+    {
+      "describe": "Mining contaminates environment and causes health problem",
+      "key_word": [
+        [
+          "long and complicated process"
+        ],
+        [
+          "nuclear waste"
+        ],
+        [
+          "radioactive"
+        ],
+        [
+          "contaminate",
+          "water"
+        ],
+        [
+          "contaminate",
+          "air"
+        ],
+        [
+          "pollute",
+          "water"
+        ],
+        [
+          "pollute",
+          "air"
+        ],
+        [
+          "health problem"
+        ],
+        [
+          "cancer"
+        ],
+        [
+          "serious illnesses"
+        ]
+      ]
+    },
+    {
+      "describe": "mining impact on traditional Native",
+      "key_word": [
+        [
+          "impact",
+          "archaeological sites"
+        ],
+        [
+          "special designation"
+        ],
+        [
+          "a traditional cultural property"
+        ],
+        [
+          "navajo nation, hopi tribe, and zuni, acoma"
+        ],
+        [
+          "gathering, hunting, hiking, and cattle grazing"
+        ],
+        [
+          "providing the public"
+        ]
+      ]
+    },
+    {
+      "describe": "general_info",
+      "key_word": [
+        [
+          "blue bead",
+          "up"
+        ],
+        [
+          "11,300 feet"
+        ],
+        [
+          "more than 100 miles away"
+        ],
+        [
+          "lies underneath the mountain"
+        ],
+        [
+          "new mexico, arizona, colorado, and utah"
+        ],
+        [
+          "uranium is a metal found",
+          "layers of sandstone"
+        ],
+        [
+          "shuttered",
+          "low price"
+        ],
+        [
+          "booming business",
+          "1950s to 1980"
+        ],
+        [
+          "booming business",
+          "1950 to 1980"
+        ],
+        [
+          "booming business",
+          "1950's to 1980"
+        ],
+        [
+          "close",
+          "low price"
+        ],
+        [
+          "submitted permits",
+          "new mine"
+        ],
+        [
+          "one third of their capacity"
+        ],
+        [
+          "1872",
+          "federal law permits mining"
+        ],
+        [
+          "angered",
+          "mining companies"
+        ],
+        [
+          "angered",
+          "property owners"
+        ],
+        [
+          "case",
+          "state supreme court"
+        ],
+        [
+          "most endangered places"
+        ],
+        [
+          "turning point"
+        ],
+        [
+          "obligation",
+          "tribal interest"
+        ],
+        [
+          "obligation",
+          "environmental impact"
+        ],
+        [
+          "potential economic",
+          "outweigh the risk"
+        ],
+        [
+          "mining companies, ranchers, and property owners"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Algorithm Result</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f8f8f8;
+			color: #333;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		/* Styles for the existing table */
+		table.table-existing {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		table.table-existing th,
+		table.table-existing td {
+			padding: 8px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+
+		table.table-existing th {
+			background-color: #f2f2f2;
+		}
+
+		table.table-existing tr:hover {
+			background-color: #f5f5f5;
+		}
+
+		/* Styles for the new table */
+		table.table-new {
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 50px;
+		}
+
+		table.table-new th,
+		table.table-new td {
+			padding: 8px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+
+		table.table-new th {
+			background-color: #f2f2f2;
+		}
+
+		table.table-new tr:hover {
+			background-color: #f5f5f5;
+		}
+
+		h1 {
+			font-size: 36px;
+			font-weight: bold;
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+
+		.result-container {
+			font-size: 18px;
+			margin-bottom: 20px;
+			text-align: left;
+			line-height: 1.5;
+			padding: 10px;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			max-width: 600px;
+			margin: 0 auto;
+			box-sizing: border-box;
+		}
+
+		a {
+			color: #008cba;
+			text-decoration: none;
+			font-weight: bold;
+			transition: color 0.3s;
+		}
+
+		a:hover {
+			color: #005f80;
+		}
+	</style>
+	<script>
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                const content = e.target.result;
+                parseCSV(content);
+            }
+
+            reader.readAsText(file);
+        }
+
+        function parseCSV(content) {
+            const rows = content.split('\n');
+            const data = [];
+
+            for (let i = 1; i < rows.length; i++) {
+                const values = rows[i].split(',');
+                data.push(values);
+            }
+
+            // Send the data to your Python backend using an AJAX request or any other method you prefer
+            // Example AJAX request:
+            // $.ajax({
+            //    type: "POST",
+            //    url: "/process_csv",
+            //    data: JSON.stringify(data),
+            //    contentType: "application/json; charset=utf-8",
+            //    dataType: "json",
+            //    success: function(response) {
+            //        // Handle the response from Python
+            //    },
+            //    error: function(error) {
+            //        console.error("Error:", error);
+            //    }
+            // });
+        }
+    </script>
+</head>
+<body>
+	<h1>Narrative Feedback</h1>
+	<div class="result-container" id="result-container">
+		<p style="white-space: pre-line">{{ result }}</p>
+	</div>
+	<p><a href="/">Return to Enter New Text and Item ID Page</a></p>
+	
+	<!-- Existing table -->
+	<table class="table-existing">
+		<thead>
+			<tr>
+				<th>Sentences</th>
+				<th>claim_score</th>
+				<th>evidence_score</th>
+				<th>claim_TRE</th>
+				<th>claim_best_match</th>
+				<th>Evid. aTRE best score</th>
+				<th>Evid. aTRE match num</th>
+				<th>Evid. bTRE best score</th>
+				<th>Evid. bTRE match num</th>
+				<th>Evid. cTRE best score</th>
+				<th>Evid. cTRE match num</th>
+				<th>Evid. dTRE best score</th>
+				<th>Evid. dTRE match num</th>
+				<th>key_word</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for row in table_data %}
+				<tr>
+					<td>{{ row['sentence'] }}</td>
+					<td>{{ row['claim_score'] }}</td>
+					<td>{{ row['evidence_score'] }}</td>
+					<td>{{ row['claim_TRE'] }}</td>
+					<td>{{ row['claim_best_score'] }}</td>
+					<td>{{ row['evid_max_score_a'] }}</td>
+					<td>{{ row['evid_num_match_a'] }}</td>
+					<td>{{ row['evid_max_score_b'] }}</td>
+					<td>{{ row['evid_num_match_b'] }}</td>
+					<td>{{ row['evid_max_score_c'] }}</td>
+					<td>{{ row['evid_num_match_c'] }}</td>
+					<td>{{ row['evid_max_score_d'] }}</td>
+					<td>{{ row['evid_num_match_d'] }}</td>
+					<td>{{ row['key_word'] }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<!-- New table -->
+	<table class="table-new">
+		<thead>
+			<tr>
+				<th>Claim ID</th>
+				<th>Claim Text</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for claim in claim_table %}
+				<tr>
+					<td>{{ claim['claim_id'] }}</td>
+					<td>{{ claim['claim'] }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chatbot</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f8f8f8;
+			color: #333;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		.container {
+			max-width: 600px;
+			margin: 50px auto;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+
+		.message-container {
+			margin-bottom: 20px;
+		}
+
+		.user-message {
+			text-align: right;
+			margin-bottom: 10px;
+		}
+
+		.bot-message {
+			text-align: left;
+			margin-bottom: 10px;
+		}
+
+		.message {
+			display: inline-block;
+			padding: 10px;
+			border-radius: 5px;
+		}
+
+		.user-message .message {
+            background-color: #008cba;
+            color: #fff;
+            text-align: left;
+            margin-right: auto;
+        }
+
+        .bot-message .message {
+            background-color: #eaeaea;
+            text-align: left;
+            margin-left: auto;
+        }
+
+		.input-container {
+			margin-top: 20px;
+		}
+
+		.user-input {
+			width: 70%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 16px;
+			box-sizing: border-box;
+		}
+
+		.send-button {
+			background-color: #008cba;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		.send-button:hover {
+			background-color: #005f80;
+		}
+
+		.start-over-button {
+			background-color: #008cba;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			margin-top: 20px;
+		}
+
+		.start-over-button:hover {
+			background-color: #005f80;
+		}
+
+		.option-container {
+			margin-top: 20px;
+		}
+
+		.option-button {
+			background-color: transparent;
+			border: none;
+			border-bottom: 2px solid transparent;
+			color: #008cba;
+			padding: 5px 10px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: border-bottom-color 0.3s;
+			margin: 5px;
+		}
+
+		.option-button:hover {
+			border-bottom-color: #008cba;
+		}
+
+		.branch-option-container {
+			margin-top: 20px;
+		}
+
+		.branch-option-button {
+			background-color: transparent;
+			border: none;
+			border-bottom: 2px solid transparent;
+			color: #008cba;
+			padding: 5px 10px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: border-bottom-color 0.3s;
+			margin: 5px;
+		}
+
+		.branch-option-button:hover {
+			border-bottom-color: #008cba;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="message-container">
+			<div class="bot-message">
+				<div class="message">Hi! How can I assist you today? Please choose an option:</div>
+			</div>
+			<div class="option-container">
+				<button id="option-button-1" class="option-button">How is my claim?</button>
+				<button id="option-button-2" class="option-button">Does my evidence support my claim?</button>
+				<button id="option-button-3" class="option-button">Does my reasoning connect my claim and evidence?</button>
+			</div>
+			<!-- Add more message containers dynamically -->
+		</div>
+		<div class="branch-option-container" style="display: none;">
+			<button id="branch-option-button-1" class="branch-option-button">How to improve my claim?</button>
+			<button id="branch-option-button-2" class="branch-option-button">Give an example of a claim</button>
+		</div>
+		<div class="input-container">
+			<input type="text" id="user-input" class="user-input" placeholder="Type your message..." autofocus>
+			<button id="send-button" class="send-button">Send</button>
+		</div>
+		<button class="start-over-button" onclick="startOver()">Start Over</button>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		function startOver() {
+			window.location.href = "/";
+		}
+
+		$(document).ready(function() {
+			$('.branch-option-container').hide();
+
+			// Function to scroll to the bottom of the message container
+			function scrollToBottom() {
+				$('html, body').animate({ scrollTop: $(document).height() }, 'fast');
+			}
+
+			// Hide option buttons
+			function hideOptionButtons() {
+				$('.option-container').hide();
+			}
+
+			// Show option buttons
+			function showOptionButtons() {
+				$('.option-container').show();
+			}
+
+			// Show branch option buttons
+			function showBranchOptions() {
+				$('.branch-option-container').show();
+			}
+
+			// Hide branch option buttons
+			function hideBranchOptions() {
+				$('.branch-option-container').hide();
+			}
+
+			// Option buttons click event
+			$('#option-button-1').click(function() {
+				var optionText = $(this).text();
+				sendMessage(optionText);
+			});
+
+			$('#option-button-2').click(function() {
+				var optionText = $(this).text();
+				sendMessage(optionText);
+			});
+
+			$('#option-button-3').click(function() {
+				var optionText = $(this).text();
+				sendMessage(optionText);
+			});
+
+			// Branch option buttons click event
+			$('#branch-option-button-1').click(function() {
+				var optionText = $(this).text();
+				sendMessage(optionText);
+			});
+
+			$('#branch-option-button-2').click(function() {
+				var optionText = $(this).text();
+				sendMessage(optionText);
+			});
+
+			function sendMessage(message) {
+				$('.message-container').append(`
+					<div class="user-message">
+						<div class="message">${message}</div>
+					</div>
+					<div class="bot-message">
+						<div class="message">Processing...</div>
+					</div>
+				`);
+				scrollToBottom();
+
+				// Perform the AJAX request to send the user message to the server and receive the bot's response
+				// Replace the URL with the appropriate endpoint in your Flask app
+				$.ajax({
+					url: '/process_message',
+					method: 'POST',
+					data: { message: message },
+					success: function(response) {
+						$('.bot-message:last .message').html(response.message);
+						scrollToBottom();
+
+						// Check if branch options should be shown
+						if (message === 'How is my claim?') {
+							showBranchOptions();
+						} else {
+							hideBranchOptions();
+						}
+					},
+					error: function() {
+						$('.bot-message:last .message').text('Oops! An error occurred.');
+						scrollToBottom();
+					}
+				});
+			}
+
+			$('#send-button').click(function() {
+				var userMessage = $('#user-input').val();
+				if (userMessage.trim() !== '') {
+					sendMessage(userMessage);
+					$('#user-input').val('');
+				}
+			});
+
+			$('#user-input').keypress(function(event) {
+				if (event.which === 13) {
+					$('#send-button').click();
+				}
+			});
+		});
+	</script>
+</body>
+</html>

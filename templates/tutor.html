@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Step by Step Tutoring</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 50px;
+        }
+
+        .left-panel {
+            flex: 1;
+            margin-right: 50px;
+        }
+
+        .right-panel {
+            flex: 1;
+        }
+
+        .heading {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .essay {
+            margin-bottom: 10px;
+        }
+
+        .essay-content {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .chat-container {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            height: 400px;
+            overflow-y: scroll;
+        }
+
+        .user-message {
+            margin-bottom: 10px;
+        }
+
+        .bot-message {
+            margin-bottom: 10px;
+            text-align: right;
+        }
+
+        .bot-message .message {
+            margin-bottom: 5px;
+            background-color: #008cba;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .user-message .message {
+            margin-bottom: 5px;
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .input-container {
+            margin-top: 20px;
+        }
+
+        .input-container input[type="text"] {
+            font-size: 16px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .input-container input[type="submit"] {
+            background-color: #008cba;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .input-container input[type="submit"]:hover {
+            background-color: #005f80;
+        }
+    </style>
+	<style>
+        /* Additional styles for the new button */
+        .new-conversation-btn {
+            background-color: #ccc;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+        }
+
+        .new-conversation-btn:hover {
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left-panel">
+        <div class="essay">
+            <!-- Added lesson ID input field -->
+            <div class="input-container">
+                <input type="text" id="lesson-id" class="lesson-id-input" placeholder="Lesson ID">
+                <input type="submit" value="Find Lesson" onclick="findLesson()">
+            </div>
+
+            <p class="essay">Essay:</p>
+            <div class="essay-content" id="essay-content">
+                <!-- Essay content will be dynamically loaded here -->
+            </div>
+            <p class="question">Question:</p>
+            <p id="question-content">
+                <!-- Question content will be dynamically loaded here -->
+            </p>
+        </div>
+    </div>
+    <div class="right-panel">
+        <h2 class="heading">CERCA bot</h2>
+        <div class="chat-container" id="chat-container">
+            <div class="bot-message">
+                <div class="message">Can you state your claim and answer the question?</div>
+            </div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type your message">
+            <input type="submit" value="Send" onclick="sendMessage()">
+        </div>
+		
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+    window.onbeforeunload = function () {
+        sessionStorage.removeItem('message_history');
+    };
+
+
+    // Find and display lesson based on the provided lesson ID
+    function findLesson() {
+        const lessonIdInput = document.getElementById("lesson-id");
+        const lessonId = lessonIdInput.value.trim();
+
+        if (lessonId !== "") {
+            // Send AJAX request to retrieve lesson data
+            $.ajax({
+                type: "POST",
+                url: "/find_lesson",
+                data: { lessonId: lessonId },
+                success: function(response) {
+                    const essayContent = document.getElementById("essay-content");
+                    const questionContent = document.getElementById("question-content");
+
+                    essayContent.innerHTML = response.essay;
+                    questionContent.textContent = response.question;
+                },
+                error: function(xhr, status, error) {
+                    console.error(error);
+                }
+            });
+        }
+    }
+
+    function sendMessage() {
+        const userInput = document.getElementById("user-input");
+        const chatContainer = document.getElementById("chat-container");
+        const userMessage = userInput.value.trim();
+
+        if (userMessage !== "") {
+            const userMessageElement = document.createElement("div");
+            userMessageElement.classList.add("user-message");
+            const userMessageContent = document.createElement("div");
+            userMessageContent.classList.add("message");
+            userMessageContent.textContent = userMessage;
+            userMessageElement.appendChild(userMessageContent);
+            chatContainer.appendChild(userMessageElement);
+
+            const botMessageElement = document.createElement("div");
+            botMessageElement.classList.add("bot-message");
+            const botMessageContent = document.createElement("div");
+            botMessageContent.classList.add("message");
+            botMessageContent.textContent = "Thinking...";
+            botMessageElement.appendChild(botMessageContent);
+            chatContainer.appendChild(botMessageElement);
+
+            $.ajax({
+                type: "POST",
+                url: "/tutoring_message",
+                data: {
+                    message: userMessage,
+                    essay: document.getElementById("essay-content").innerHTML,
+                    question: document.getElementById("question-content").textContent
+                },
+                success: function(response) {
+                    $('.bot-message:last .message').html(response.message);
+                    scrollToBottom();
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                },
+                error: function(xhr, status, error) {
+                    botMessageContent.textContent = "Oops! An error occurred.";
+                    console.error(error);
+                }
+            });
+
+            userInput.value = "";
+        }
+    }
+
+    function scrollToBottom() {
+        const chatContainer = document.getElementById("chat-container");
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+</script>
+</body>
+</html>

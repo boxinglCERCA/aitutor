@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ThinkCERCA AI</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f8f8f8;
+			color: #333;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 36px;
+			font-weight: bold;
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+
+		form {
+			display: inline-block;
+			background-color: #fff;
+			padding: 30px;
+			border-radius: 10px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+
+		label {
+			font-size: 18px;
+			font-weight: bold;
+			display: block;
+			margin-bottom: 10px;
+			text-align: left;
+		}
+
+		input[type="text"],
+		textarea {
+			font-size: 16px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			width: 100%;
+			margin-bottom: 20px;
+			box-sizing: border-box;
+		}
+
+		input[type="submit"] {
+			background-color: #008cba;
+			color: #fff;
+			font-size: 18px;
+			font-weight: bold;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #005f80;
+		}
+
+		.logo {
+			margin-top: 50px;
+			font-size: 24px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		.button {
+			margin-top: 20px;
+		}
+		/* Add new styles for file input */
+		.upload-button {
+			font-size: 18px;
+			font-weight: bold;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			background-color: #008cba;
+			color: #fff;
+			cursor: pointer;
+		}
+
+		.upload-button:hover {
+			background-color: #005f80;
+		}
+	</style>
+</head>
+<body>
+	<h1>Enter Response Text and Item ID</h1>
+	{% if success_message %}
+    <p style="color: green;">{{ success_message }}</p>
+    {% endif %}
+    
+    <!-- Display the error message if provided as a query parameter -->
+    {% if error_message %}
+    <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+	<form action="/" method="POST">
+		<label for="text">Student Response:</label>
+		<textarea id="text" name="text" rows="10" required></textarea>
+		<label for="lesson-id">Enter item id i172, i173 or i174:</label>
+		<input type="text" id="lesson-id" name="lesson_id" required>
+		<input type="submit" value="Submit">
+	</form>
+	<form action="/upload" method="POST" enctype="multipart/form-data">
+		<label for="csv-file">Upload CSV File:</label>
+		<input type="file" id="csv-file" name="csv_file" accept=".csv" required>
+		<label for="upload-lesson-id">Item ID:</label>
+		<input type="text" id="upload-lesson-id" name="upload_lesson_id" required>
+		<input type="submit" class="upload-button" value="Upload and Process CSV">
+	</form>
+	<div id="success-message" style="color: green;"></div>
+	<p class="logo">ThinkCERCA</p>
+	<a href="/tutor" class="button">Step by Step Tutoring</a>
+</body>
+</html>

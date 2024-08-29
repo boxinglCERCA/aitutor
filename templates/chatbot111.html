@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chatbot</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f8f8f8;
+			color: #333;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		.container {
+			max-width: 600px;
+			margin: 50px auto;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+
+		.message-container {
+			margin-bottom: 20px;
+		}
+
+		.user-message {
+			text-align: right;
+			margin-bottom: 10px;
+		}
+
+		.bot-message {
+			text-align: left;
+			margin-bottom: 10px;
+		}
+
+		.message {
+			display: inline-block;
+			padding: 10px;
+			border-radius: 5px;
+		}
+
+		.user-message .message {
+            background-color: #008cba;
+            color: #fff;
+            text-align: left;
+            margin-right: auto;
+        }
+
+        .bot-message .message {
+            background-color: #eaeaea;
+            text-align: left;
+            margin-left: auto;
+        }
+
+		.input-container {
+			margin-top: 20px;
+		}
+
+		.user-input {
+			width: 70%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 16px;
+			box-sizing: border-box;
+		}
+
+		.send-button {
+			background-color: #008cba;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		.send-button:hover {
+			background-color: #005f80;
+		}
+
+		.start-over-button {
+			background-color: #008cba;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			margin-top: 20px;
+		}
+
+		.start-over-button:hover {
+			background-color: #005f80;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="message-container">
+			<div class="bot-message">
+				<div class="message">Hi! How can I assist you today?Please choose an option:<br>
+                1. How is my claim?<br>
+                2. Does my evidence support my claim?<br>
+                3. Does my reasoning connect my claim and evidence?</div>
+			</div>
+			<!-- Add more message containers dynamically -->
+		</div>
+		<div class="input-container">
+			<input type="text" id="user-input" class="user-input" placeholder="Type your message..." autofocus>
+			<button id="send-button" class="send-button">Send</button>
+		</div>
+		<button class="start-over-button" onclick="startOver()">Start Over</button>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		function startOver() {
+			window.location.href = "/";
+		}
+
+		$(document).ready(function() {
+			$('#send-button').click(function() {
+				var userMessage = $('#user-input').val();
+				if (userMessage.trim() !== '') {
+					$('.message-container').append(`
+						<div class="user-message">
+							<div class="message">${userMessage}</div>
+						</div>
+						<div class="bot-message">
+							<div class="message">Processing...</div>
+						</div>
+					`);
+					$('#user-input').val('');
+					scrollToBottom();
+
+					// Perform the AJAX request to send the user message to the server and receive the bot's response
+					// Replace the URL with the appropriate endpoint in your Flask app
+					$.ajax({
+						url: '/process_message',
+						method: 'POST',
+						data: { message: userMessage },
+						success: function(response) {
+							$('.bot-message:last .message').text(response.message);
+							scrollToBottom();
+						},
+						error: function() {
+							$('.bot-message:last .message').text('Oops! An error occurred.');
+							scrollToBottom();
+						}
+					});
+				}
+			});
+
+			$('#user-input').keypress(function(event) {
+				if (event.which === 13) {
+					$('#send-button').click();
+				}
+			});
+
+			function scrollToBottom() {
+				$('html, body').animate({ scrollTop: $(document).height() }, 'fast');
+			}
+		});
+	</script>
+</body>
+</html>

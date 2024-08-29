@@ -1,0 +1,519 @@
+{
+  "ex": {
+    "essay":"The Florida Everglades teem with life. Situated at the southern end of the state, between Lake Okeechobee and the Gulf Coast, the Everglades are the largest wilderness east of the Mississippi River. Migratory and wading birds tiptoe through marshy grasslands. Orchids and ferns dot the hardwood forests. Alligators lounge in the shallows and on muddy riverbanks. Mangrove leaves rustle in the wind as the brackish water laps at their roots.The Florida Everglades once covered 11,000 acres across the southern end of the state. Wetlands are an important ecosystem. For centuries, however, humans thought of wetlands as unhygienic swamps. Draining the Everglades was suggested in the late 19th century. As soon as Florida became a state in 1845, its legislature asked permission from Congress to drain the Everglades. Canals were dug to remove or redirect the water. Land that dried out was reclaimed for agriculture or building purposes. This reclamation allowed for significant development in south Florida. Sugar farmers moved into the area and prospered. The city of Miami took root. Approximately 50% of the Everglades has been reclaimed for agricultural or urban use. Much of the northern area has been polluted with phosphorus. This phosphorus is agricultural runoff from the farms near the Everglades. Concerned Floridians had been advocating for saving the area since the 1930s. Their efforts paid off in 1947 when Congress created the Everglades National Park. Starting in the late 1970s environmental concerns at both the national and international levels refocused attention on the Everglades. The area was designated as one of the world’s most important wetland areas. Since then, efforts have been underway to safeguard the park and return the Everglades to health. Water levels are monitored, as are nutrient levels in both water and soil samples. This has been the largest environmental conservation project in the history of the United States. Much of it is designed to reverse-engineer the canal system that was built in the 19th and mid-20th centuries. Ecological indicators are showing some improvements. The crayfish population is up. Wading and migratory birds have improved their nesting habits. Despite all the good news, the Everglades now face a new threat. In the United States the Burmese python is a popular pet. Docile and beautifully patterned in brown and gold diamond shapes, these snakes can be purchased at pet stores or reptile shows. Owners keep them in cages or tanks and feed them rats or mice. Most people buy pythons when the animals are small. Pythons can grow very quickly. For many pet owners, the pet pythons become too big to manage. The first Burmese python was found in the Florida Everglades in 1979. It’s presumed the animal was originally kept as a pet and then released by its owner. Starting in 1992—when it’s thought that numerous Burmese pythons escaped pet stores and cages damaged in Hurricane Andrew—the numbers have grown at a faster rate. The Burmese pythons that have been released in southern Florida have found a habitat they like in the Everglades. They are breeding in the Everglades and have reached numbers that designate them as an invasive species. Pythons are eating machines. They can eat anything from deer to bobcats, to raccoons to alligators. They especially enjoy dining on small mammals and birds. Studies have shown that since their appearance in the Everglades, the numbers of small mammals in the area are down significantly. Additionally, this population loss is not observed in areas where the python has not established itself. In 2013 the Florida Fish and Wildlife Conservation program issued permits to hunt the snakes within state wildlifemanaged areas of the Everglades. Sixty-eight animals were captured.  ",
+	"question": "What was the bigger threat to the Everglades: draining the swamp or the Burmese python? Support your claim with evidence from the text.",
+    "prompt_type": 1,
+    "support_yes": {
+      "relevant_facts": [
+        {
+          "describe": "The everglades are a unique and important ecosystem",
+          "sentences": [
+            "Wetlands are an important ecosystem.",
+            "The area was designated as one of the world's most important wetland areas."
+          ]
+        },
+        {
+          "describe": "Work to preserve the Everglades is a huge and ongoing environmental effort",
+          "sentences": [
+            "Concerned Floridians had been advocating for saving the area since the 1930s.",
+            "Their efforts paid off in 1947 when Congress created the Everglades National Park."
+          ]
+        },
+        {
+          "describe": "the Everglades are now only half the size it used to be",
+          "sentences": [
+            "Approximately 50% of the Everglades has been reclaimed for agricultural or urban use.",
+            "The Florida Everglades once covered 11,000 acres across the southern end of the."
+          ]
+        },
+        {
+          "describe":"general fact for drawing",
+          "sentences": [
+            "Situated at the southern end of the state, between Lake Okeechobee and the Gulf Coast, the Everglades are the largest wilderness east of the Mississippi River. ",
+            "The Florida Everglades teem with life.",
+            "Migratory and wading birds tiptoe through marshy grasslands.",
+            "Orchids and ferns dot the hardwood forests.",
+            "humans thought of wetlands as unhygienic swamps",
+            "Mangrove leaves rustle in the wind as the brackish water laps at their roots.",
+            "Since then, efforts have been underway to safeguard the park and return the Everglades to health. ",
+            "Sugar farmers moved into the area and prospered.",
+            "Much of the northern area has been polluted with phosphorus",
+            "Much of it is designed to reverse-engineer the canal system that was built in the 19th and mid-20th centuries. ",
+            "This phosphorus is agricultural runoff from the farms near the Everglades",
+            "As soon as Florida became a state in 1845, its legislature asked permission from Congress to drain the Everglades",
+            "Canals were dug to remove or redirect the water.",
+            "Land that dried out was reclaimed for agriculture or building purposes.",
+            "This has been the largest environmental conservation project in the history of the United States. ",
+            "For centuries, however, humans thought of wetlands as unhygienic swamps.",
+            "Starting in the late 1970s environmental concerns at both the national and international levels refocused attention on the Everglades.",
+            "Draining the Everglades was suggested in the late 19th century. "
+          ]
+        }
+      ]
+    },
+    "support_no": {
+      "relevant_facts": [
+        {
+          "describe": "There have been active campaigns in the past to eradicate them",
+          "sentences": [
+            "In 2013 the Florida Fish and Wildlife Conservation program issued permits to hunt the snakes within state wildlife-managed areas of the Everglades.  ",
+            "people were allowed to hunt them"
+          ]
+        },
+        {
+          "describe": "They have increased their population to the point of qualifying as invasive species",
+          "sentences": [
+            "Burmese pythons hunt other animals that are native to the Everglades.",
+            "Burmese pythns are invading the everglades.",
+            "python is an invasive species.",
+            "They are breeding in the Everglades and have reached numbers that designate them as an invasive species.",
+            "Starting in 1992--when it's thought that numerous Burmese pythons escaped pet stores and cages damaged in Hurricane Andrew--the numbers have grown at a faster rate.",
+            "Pythons can grow very quickly. "
+          ]
+        },
+        {
+          "describe": "Pythons are voracious eaters",
+          "sentences": [
+            "Pythons are eating machines.",
+            "They can eat anything from deer to bobcats, to raccoons to alligators.",
+            "The python eat everything from big animal to small mammals",
+            "They especially enjoy dining on small mammals and birds."
+          ]
+        },
+        {
+          "describe": "Population of small mammals falls significantly where pythons are prevalents",
+          "sentences": [
+            "since python appearance in the Everglades, the numbers of small mammals in the area are down significantly.",
+            "Additionally, this population loss is not observed in areas where the python has not established itself. "
+          ]
+        },
+        {
+          "describe": "Everglades is doing fine",
+          "sentences": [
+            "The draining of the Everglades in the late 19-century did affect the ecosystem but, the problem was resolved with the creation of the Everglades National Park.",
+            "The crayfish population is up.",
+            "This reclamation allowed for significant development in south Florida.",
+            "Wading and migratory birds have improved their nesting habits.",
+            "Ecological indicators are showing some improvements.",
+			"Since then efforts have been underway to safeguard the park and return the Everglades to health"
+          ]
+        },
+        {
+          "describe":"general fact for python",
+          "sentences": ["The first Burmese python was found in the Florida Everglades in 1979. ",
+            "The Burmese pythons that have been released in southern Florida have found a habitat they like in the Everglades.",
+            "It's presumed the animal was originally kept as a pet and then released by its owner. ",
+            "In the United States the Burmese python is a popular pet.",
+            "Sixty-eight animals were captured.",
+            "Docile and beautifully patterned in brown and gold diamond shapes, these snakes can be purchased at pet stores or reptile shows. ",
+            "Owners keep them in cages or tanks and feed them rats or mice. ",
+            "Most people buy pythons when the animals are small.  ",
+            "For many pet owners, the pet pythons become too big to manage."
+          ]
+        }
+      ]
+    },
+    "solution": [
+    ],
+    "general_info": [
+    ],
+    "n_claim": [
+      "Burmese python is bigger threat",
+	  "the Burmese Pythons is a bigger threat than draining the Everglades",
+      "draining the swamp are not the greater threat to the Everglades",
+      "The bigger threat to the Everglades was the Burmese Python.",
+      "the pythons are causing even more trouble",
+      "the Burmese Pythons is a bigger threat than Draining the Everglades.",
+      "Burmese pythons are dealing a lot more damage than what the draining swamp",
+      "Burmese python was the bigger threat",
+      "the python was more threatened than Everglades",
+      "The bigger threat to the Everglades are the pythons",
+      "the biggest threat was the Burmese pythons",
+      "the burmeese python is a bigger threat to the swamp",
+      "the Burmese python was the worst",
+      "Burmese snake is more of a threat to the Everglades than draining the swamp.",
+      "the python is worse than draining of the everglades",
+      "Burmese pythons was worse",
+      "Draining swamp wouldn't be a major problem",
+      "Burmese Pythons where the Everglades biggest threats",
+      "Burmuese python was the bigger therat",
+      "draining is less of a threat.",
+      "The Burmese pythons caused much more damage than draining the swamp.",
+      "I think that the pythons are a bigger threat",
+      "Burmese python posed a more threat",
+      "snakes is more dangerous",
+      "i think that the bigger threat was the python",
+      "The Burmese python seems more dangerous than draining the swamp",
+      "python is a bigger threat than draining",
+      "reason why the pythons is a bigger threat than draining the swamp",
+      "That is why the Burmese python is the bigger threat to the Everglades than the draining of the swamp."
+    ],
+    "y_claim": [
+      "draining the swamps was a bigger threat",
+      "the pythons are not the greater threat to the Everglades",
+      "the biggest threat to the Everglades was draining the swamp",
+      "draining the swamp seems more dangerous than burmese python",
+      "Draining the Everglades is a bigger threat than the Burmese Pythons.",
+      "draining the everglades posed a bigger threat than the Burmese pythons",
+      "draining swamp are dealing a lot more damage than what Burmese pythons",
+      "Everglades was more threatened than the python",
+      "Draining swamp is bigger threat",
+      "the draining of the swap causes a greater threat to the Everglades",
+      "draining is a bigger threat than the python",
+      "the bigger threat to the Everglades was draining the swamp",
+      "Draining has done the most damage",
+      "bigest threat was that they had to drain the water out",
+      "draining the water was more of a threat",
+      "draining of the everglades is worse than the python",
+      "the drainage was worse",
+      "draining the swamp would be worse",
+      "draining the swamp may seem to have a bigger impact",
+      "Burmuese python is less of a threat.",
+      "The draining was a bigger problem",
+      "pythons wouldn't be a major problem",
+      "the draining is worse",
+      "i think that the bigger threat was the swamp",
+      "the swamp drainage was the bigger threat to the Everglades than the Burmese python",
+      "draining of the Everglades did much greater damage than the Burmese Python",
+      "Draining the swamp was the worst",
+      "the main theart was that people were draning the everglades",
+      "The swamp was the biggest problem",
+      "draining is the bigger threat.",
+      "reason why draining the swamp is a bigger threat than the pythons",
+	  "That is why the draining of the swamp is the bigger threat to the Everglades than the Burmese python."
+    ]
+  },
+  "keys": [
+    {
+      "describe": "The everglades are a unique and important ecosystem",
+      "key_word": [
+        [
+          "important ecosystem"
+        ],
+        [
+          "was designated as",
+          "important wetland"
+        ]
+      ]
+    },
+    {
+      "describe": "Work to preserve the Everglades is a huge and ongoing environmental effort",
+      "key_word": [
+        [
+          "been advocating for saving the area"
+        ],
+        [
+          "efforts paid off in 1947"
+        ],
+        [
+          "congress created the everglades national park"
+        ]
+      ]
+    },
+    {
+      "describe": "the Everglades are now only half the size it used to be",
+      "key_word": [
+        [
+          "50",
+          "has been reclaimed"
+        ],
+        [
+          "reclaimed for agricultural"
+        ],
+        [
+          "reclaimed for urban"
+        ],
+        [
+          "50",
+          "for agricultural"
+        ],
+        [
+          "50",
+          "for urban"
+        ]
+      ]
+    },
+    {
+      "describe": "general fact for drawing",
+      "key_word": [
+        [
+          "everglades are the largest wilderness"
+        ],
+        [
+          "teem with life"
+        ],
+        [
+          "underway to safeguard"
+        ],
+        [
+          "return the Everglades to health"
+        ],
+        [
+          "sugar farmers",
+          "moved into the area"
+        ],
+        [
+          "covered 11,000 acres"
+        ],
+        [
+          "polluted with phosphorus"
+        ],
+        [
+          "reverse-engineer the canal system"
+        ],
+        [
+          "phosphorus",
+          "agricultural runoff"
+        ],
+        [
+          "permission",
+          "drain the everglade"
+        ],
+        [
+          "dug",
+          "redirect the water"
+        ],
+        [
+          "land that dried out"
+        ],
+        [
+          "agriculture or building purposes"
+        ],
+        [
+          "largest environmental",
+          "conservation project"
+        ],
+        [
+          "wetlands",
+          "unhygienic swamps"
+        ],
+        [
+          "the national and international",
+          "refocused"
+        ],
+        [
+          "draining the everglades",
+          " was suggested"
+        ]
+      ]
+    },
+    {
+      "describe": "There have been active campaigns in the past to eradicate them",
+      "key_word": [
+        [
+          "permits",
+          "to hunt"
+        ],
+        [
+          "allowed to hunt"
+        ]
+      ]
+    },
+    {
+      "describe": "They have increased their population to the point of qualifying as invasive species",
+      "key_word": [
+        [
+          "invasive species"
+        ],
+        [
+          "breeding in the Everglades"
+        ],
+        [
+          "grow very quickly"
+        ],
+        [
+          "grown at a faster rate"
+        ],
+        [
+          "invad",
+          "everglades"
+        ],
+        [
+          "found a new habitat"
+        ]
+      ]
+    },
+    {
+      "describe": "Pythons are voracious eaters",
+      "key_word": [
+        [
+          "eating machine"
+        ],
+        [
+          "eat",
+          "anything"
+        ],
+        [
+          "eat",
+          "mammals"
+        ],
+        [
+          "raccoons to alligators"
+        ],
+        [
+          "eat almost any"
+        ],
+        [
+          "ate the small mammals"
+        ],
+        [
+          "alligator",
+          "deer"
+        ],
+        [
+          "deer",
+          "alligator"
+        ],
+        [
+          "eat",
+          "most of the animals"
+        ],
+        [
+          "eat",
+          "every thing"
+        ],
+        [
+          "eat",
+          "everything"
+        ],
+        [
+          "eat",
+          "from small to large"
+        ],
+        [
+          "eat",
+          "from large to small"
+        ]
+      ]
+    },
+    {
+      "describe": "Population of small mammals falls significantly where pythons are prevalents",
+      "key_word": [
+        [
+          "small mammals",
+          "down"
+        ],
+        [
+          "breeding in the everglades"
+        ],
+        [
+          "reproducing in the everglades"
+        ],
+        [
+          "dining",
+          "small mammals"
+        ],
+        [
+          "eat",
+          "small mammals"
+        ],
+        [
+          "eat",
+          "small animal"
+        ],
+        [
+          "population loss",
+          "is not observed"
+        ],
+        [
+          "population",
+          "decreas"
+        ],
+        [
+          "wildlife",
+          "decline"
+        ],
+        [
+          "decreased in population"
+        ],
+        [
+          "population",
+          "down"
+        ],
+        [
+          "impact on",
+          "population"
+        ],
+        [
+          "number",
+          "down"
+        ],
+        [
+          "small animal",
+          "kill"
+        ],
+        [
+          "reduce",
+          "small mammal"
+        ],
+        [
+          "eat little animal"
+        ]
+      ]
+    },
+    {
+      "describe": "Everglades is doing fine",
+      "key_word": [
+        [
+          "population",
+          "up"
+        ],
+        [
+          "improved",
+          "nesting habits"
+        ],
+        [
+          "Ecological indicator",
+          "improvement"
+        ]
+      ]
+    },
+    {
+      "describe": "general fact for python",
+      "key_word": [
+        [
+          "python was found",
+          "1979"
+        ],
+        [
+          "python",
+          "releas"
+        ],
+        [
+          "kept as a pet"
+        ],
+        [
+          "python",
+          "popular pet"
+        ],
+        [
+          "Sixty-eight",
+          "captured"
+        ],
+        [
+          "68",
+          "captured"
+        ],
+        [
+          "sixtyeight",
+          "captured"
+        ],
+        [
+          "sixty-eight",
+          "captured"
+        ],
+        [
+          "can be purchased",
+          "pet store"
+        ],
+        [
+          "too big to manage"
+        ],
+        [
+          "releas",
+          "by pet owner"
+        ]
+      ]
+    }
+  ]
+}
