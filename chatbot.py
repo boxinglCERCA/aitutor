@@ -123,6 +123,9 @@ def find_lesson():
     else:
         return jsonify({"error": "Lesson not found."}), 404
 
+@app.route('/instructions')
+def instructions():
+    return render_template('instructions.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=False)
